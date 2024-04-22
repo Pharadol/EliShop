@@ -1,10 +1,46 @@
+"use client";
+import Image from "next/image";
 
-function Banner() {
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { banners } from "@/assets/data/banners";
+import Link from "next/link";
+
+function SwiperBanner() {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident pariatur sunt rerum tempora facere qui nam odit! Ex natus dignissimos magni molestias sequi? Saepe, quisquam dolor? Nostrum impedit a totam praesentium nobis alias nemo, quos quasi et? Porro vel facere, placeat non officia nam animi quia, quo voluptatibus esse sint laboriosam, impedit reprehenderit cumque. Illo excepturi eum alias, non dolores eligendi saepe maiores error ea illum blanditiis optio necessitatibus ab vel dignissimos velit perspiciatis hic iste omnis recusandae? Mollitia recusandae facilis fugiat! Unde earum fugit natus inventore consequuntur tempore nam sit magni error eos vitae, officiis dicta asperiores ipsum qui.</p>
+    <div className="w-full max-w-[1440px] mx-auto">
+      <Swiper
+        pagination={{ type: "bullets", clickable: true }}
+        modules={[Autoplay, Pagination]}
+        loop={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => console.log(swiper)}
+        className="h-auto w-full"
+      >
+        {banners.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Link
+              href={item.link}
+              className="flex h-40 w-full items-center justify-center sm:h-[298px] lg:h-[370px] xl:h-[525px] cursor-pointer"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                className="block h-full w-full object-cover"
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default SwiperBanner;
