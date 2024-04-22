@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import { banners } from "@/assets/data/banners";
 import Link from "next/link";
 
-function SwiperBanner() {
+function BannerSwiper() {
   return (
     <div className="w-full max-w-[1440px] mx-auto">
       <Swiper
@@ -21,7 +21,6 @@ function SwiperBanner() {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
         className="h-auto w-full"
       >
         {banners.map((item, index) => (
@@ -43,4 +42,4 @@ function SwiperBanner() {
   );
 }
 
-export default SwiperBanner;
+export default BannerSwiper;
