@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/EliShopLogo.png";
+import logo from "@/assets/images/EliShopLogo.png";
 import { FaSearch } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
