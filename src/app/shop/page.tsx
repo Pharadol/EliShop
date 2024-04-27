@@ -1,7 +1,7 @@
 import { fetchProduct } from "@/api/products";
 import Container from "@/components/Container";
 import FilterSection from "@/components/shop/FilterSection";
-import ProductList from "@/components/ProductList";
+import ProductList from "@/components/shop/ProductList";
 import { Product } from "@/model/Product";
 
 async function ShopePage() {

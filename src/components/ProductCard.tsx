@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/model/Product";
-import { getCategory, getTags, getThumbUrl } from "@/utils/blogHelperUtils";
+import { getCategory, getTags, getThumbUrl } from "@/utils/productHelperUtils";
 import { MdFavorite } from "react-icons/md";
 
 function ProductCard({ product }: { product: Product }) {

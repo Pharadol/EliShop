@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/model/Product";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts, initFilterProduct } from "@/redux/slices/productsSlice";
