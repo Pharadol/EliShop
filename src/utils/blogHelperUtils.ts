@@ -1,13 +1,15 @@
 import { Product } from "@/model/Product";
 
 const getThumbUrl = (blog: Product) => {
-  return `${blog.attributes.thumbnail?.data?.attributes?.url}`;
+  return `${process.env.API_URL}${blog.attributes.thumbnail?.data?.attributes?.url}`;
 };
-const getCategories = (blog: Product) => {
-  return blog.attributes.categories.data;
+const getCategory = (blog: Product) => {
+  return blog.attributes?.category?.data
+    ? blog.attributes.category.data.attributes.title
+    : null;
 };
-const getTag = (blog: Product) => {
-  return blog.attributes.tag.data.attributes.title;
+const getTags = (blog: Product) => {
+  return blog.attributes?.tags?.data ? blog.attributes.tags.data : [];
 };
 
-export { getThumbUrl, getCategories, getTag };
+export { getThumbUrl, getCategory, getTags };

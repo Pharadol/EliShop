@@ -10,34 +10,35 @@ export interface Product {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    tag: Tag;
-    categories: {
-      data: Category[]
-    }
-    thumbnail?: Thumbnail | null
+    tags: {
+      data: Tags[]
+    };
+    category: Category;
+    thumbnail?: Thumbnail | null;
   };
 }
 
-export interface Tag {
+export interface Tags {
+  id: number;
+  attributes: {
+    title: string;
+    key: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+  };
+}
+
+export interface Category {
   data: {
     id: number;
     attributes: {
       title: string;
+      key: string;
+      description: string;
       createdAt: string;
       updatedAt: string;
       publishedAt: string;
     };
   };
 }
-
-export interface Category {
-  id: number;
-  attributes: {
-    title: string;
-    description: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-  }
-}
-
