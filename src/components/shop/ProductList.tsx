@@ -1,9 +1,14 @@
 "use client";
 import { Product } from "@/model/Product";
 import ProductCard from "../ProductCard";
+// import LoadingProductList from "../shop/LoadingProductList";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts, initFilterProduct } from "@/redux/slices/productsSlice";
+import {
+  setProducts,
+  initFilterProduct,
+  filterSearch,
+} from "@/redux/slices/productsSlice";
 
 import { useEffect, useState } from "react";
 
@@ -25,6 +30,10 @@ function ProductList({ list }: { list: Product[] }) {
     dispatch(setProducts(list));
     dispatch(initFilterProduct());
   }, [list, dispatch]);
+
+  useEffect(() => {
+    dispatch(filterSearch({ searchText: search }));
+  }, [search, dispatch]);
 
   return (
     <div>
@@ -57,7 +66,6 @@ function ProductList({ list }: { list: Product[] }) {
           </button>
         </div>
       </div>
-
       <ol className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
         {productList.map((item: Product) => (
           <ProductCard key={item.id} product={item} />

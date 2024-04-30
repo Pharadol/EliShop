@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import "swiper/swiper-bundle.css";
 import StoreProvider from "./StoreProvider";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -20,6 +22,7 @@ export default function RootLayout({
         <StoreProvider>
           <NavBar />
           {children}
+          <Footer />
         </StoreProvider>
       </body>
     </html>

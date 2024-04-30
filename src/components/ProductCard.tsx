@@ -23,7 +23,7 @@ function ProductCard({ product }: { product: Product }) {
             // layout="fill"
             // objectFit="cover"
           />
-          <div className="abosute bottom-0 flex items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
+          <div className="abosute bottom-0 flex flex-wrap items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
             <button className="bg-gray-800 text-gray-300 px-4 py-2 text-xs rounded-full flex items-center gap-1 hover:bg-gray-200 hover:text-gray-800 duration-100 border-[1px] border-gray-700 ">
               <span>Add to cart</span>
             </button>
