@@ -4,7 +4,6 @@ import { Product } from "@/model/Product";
 const initialState = {
   products: [] as Product[],
   filteredProducts: [] as Product[],
-  search: "" as string,
 };
 
 const productsSlice = createSlice({
@@ -60,12 +59,20 @@ const productsSlice = createSlice({
 
       state.filteredProducts = filteredProducts;
     },
-    setSearch: (state, action: PayloadAction<string>) => {
-      state.search = action.payload;
+    filterSearch: (state, action: PayloadAction<{ searchText: string }>) => {
+      const searchText = action.payload.searchText.toLowerCase().trim();
+      const filteredProducts = state.products.filter((item) => {
+        const productName = item.attributes.name.toLowerCase().trim();
+        const searchMatch =
+          !searchText || productName.includes(searchText);
+        return searchMatch;
+      });
+
+      state.filteredProducts = filteredProducts;
     },
   },
 });
 
-export const { setProducts, initFilterProduct, filterProducts } =
+export const { setProducts, initFilterProduct, filterProducts, filterSearch } =
   productsSlice.actions;
 export default productsSlice.reducer;

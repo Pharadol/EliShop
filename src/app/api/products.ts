@@ -1,7 +1,7 @@
 import axios from "axios";
 const BASE_API_URL = `${process.env.API_URL}/api`;
 
-export const fetchProduct = async () => {
+export const fetchProducts = async () => {
   try {
     const response = await axios.get(`${BASE_API_URL}/products?populate=*`);
     return response.data.data;
