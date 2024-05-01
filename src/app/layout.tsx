@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import "swiper/swiper-bundle.css";
-import StoreProvider from "./StoreProvider";
+import Providers from "./Providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-display">
-        <StoreProvider>
+        <Providers>
           <NavBar />
-          {children}
-        </StoreProvider>
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
