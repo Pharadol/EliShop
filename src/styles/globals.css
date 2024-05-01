@@ -1,5 +1,18 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./base.css"
 
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500 900;
+  src: url("../fonts/Poppins.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-stretch: 75% 125%;
+}
+
+@layer base{
+  body {
+      @apply dark:bg-zinc-900 bg-white
+  }
+}
