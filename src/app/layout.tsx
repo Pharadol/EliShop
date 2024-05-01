@@ -3,8 +3,7 @@ import "../styles/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "swiper/swiper-bundle.css";
-import StoreProvider from "./StoreProvider";
-
+import Providers from "./Providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,18 +11,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className="font-display">
-        <StoreProvider>
+        <Providers>
           <NavBar />
-          {children}
+          <main className="min-h-screen">{children}</main>
           <Footer />
-        </StoreProvider>
+        </Providers>
       </body>
     </html>
   );
