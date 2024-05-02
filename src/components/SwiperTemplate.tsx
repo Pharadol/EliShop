@@ -18,7 +18,7 @@ type SwiperOptionType = SwiperOptions & {
   autoplay?: { delay: number; disableOnInteraction: boolean };
 };
 
-function SwiperTemplate({ items }) {
+function SwiperTemplate() {
   const itemss = [{ title: "s" }];
   const swiperSettings: SwiperOptionType = {
     navigation: true,
