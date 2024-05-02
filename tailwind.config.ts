@@ -7,8 +7,8 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js",
-  ],
+    "./node_modules/@nextui-org/theme/dist/components/(button|input|modal|ripple|spinner).js"
+],
   theme: {
     extend: {
       fontFamily: {
