@@ -1,0 +1,9 @@
+.login-modal-btn {
+  @apply rounded-md bg-emerald-500 dark:bg-emerald-600 text-white px-4 py-2 hover:opacity-70;
+}
+.group-btn {
+  @apply flex bg-zinc-200 dark:bg-zinc-800 p-1 rounded-lg w-fit mx-auto;
+}
+.select-tab-btn {
+  @apply rounded-lg px-8 py-1 duration-200 opacity-70 hover:opacity-100;
+}
