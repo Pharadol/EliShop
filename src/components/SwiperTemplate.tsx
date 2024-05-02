@@ -17,7 +17,6 @@
 //   modules?: any[];
 //   autoplay?: { delay: number; disableOnInteraction: boolean };
 // };
-
 // function SwiperTemplate({ items }) {
 //   const itemss = [{ title: "s" }];
 //   const swiperSettings: SwiperOptionType = {
