@@ -7,8 +7,8 @@ type Props = {
   handleTab: (tab: string) => void;
 };
 
-function SignUpForm({ handleTab }:Props) {
-  const { register, handleSubmit } = useForm<FormValues>();
+function SignUpForm({ handleTab }: Props) {
+  const { register, handleSubmit } = useForm<SignUp>();
 
   const onSubmit: SubmitHandler<SignUp> = (data) => {
     console.log(data);
