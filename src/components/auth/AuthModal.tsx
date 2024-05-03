@@ -29,7 +29,7 @@ export default function AuthModal() {
         backdrop="blur"
         placement="center"
       >
-        <ModalContent className="min-h-[448px]">
+        <ModalContent className="min-h-[476px]">
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1 mt-5">

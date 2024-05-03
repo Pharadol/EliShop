@@ -7,3 +7,16 @@
 .select-tab-btn {
   @apply rounded-lg px-8 py-1 duration-200 opacity-70 hover:opacity-100;
 }
+
+form { 
+  @apply flex-col flex gap-4;
+.err {
+  @apply mx-2 text-red-500;
+}
+  p span {
+    @apply !text-blue-500 hover:!text-blue-400 cursor-pointer inline-block;
+  }
+  .submit-form-btn {
+    @apply bg-emerald-500 dark:bg-emerald-600 py-6 !text-lg !text-white;
+  }
+}
