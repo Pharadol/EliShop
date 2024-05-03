@@ -20,7 +20,7 @@ import {
 } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "@/redux/slices/authSlice";
-import { navMenu } from "@/assets/data/NavMenu";
+import { navMenu } from "../assets/data/NavMenu";
 
 function NavBar() {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ function NavBar() {
     await dispatch(logoutUser());
     window.location.href = "/";
   };
-  
+
   return (
     <Navbar
       shouldHideOnScroll
