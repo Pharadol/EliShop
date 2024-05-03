@@ -1,4 +1,4 @@
-export const navMenu = [
+const navMenu:Menu[] = [
   {
     title: "Home",
     link: "/",
@@ -20,3 +20,10 @@ export const navMenu = [
     link: "/wish-list",
   },
 ]
+
+interface Menu {
+  title: string;
+  link:string
+}
+
+export { navMenu }

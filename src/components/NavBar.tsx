@@ -20,7 +20,7 @@ import {
 } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
 import { logoutUser } from "@/redux/slices/authSlice";
-import { navMenu } from "../assets/data/NavMenu";
+import { navMenu } from "@/assets/data/navMenu";
 
 function NavBar() {
   const dispatch = useDispatch();
