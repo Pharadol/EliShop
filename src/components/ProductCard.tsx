@@ -3,6 +3,9 @@ import Image from "next/image";
 import { Product } from "@/model/Product";
 import { getCategory, getTags, getThumbUrl } from "@/utils/productHelperUtils";
 import { MdFavorite } from "react-icons/md";
+import { Chip } from "@nextui-org/chip";
+import { PiShoppingCartLight } from "react-icons/pi";
+import { Card, Skeleton } from "@nextui-org/react";
 
 function ProductCard({ product }: { product: Product }) {
   const category = getCategory(product);
@@ -10,8 +13,22 @@ function ProductCard({ product }: { product: Product }) {
   const discount = product.attributes.discount;
 
   return (
-    <li className="group border-[1px] rounded-md hover:border-gray-400 transition-all duration-200">
+    <li className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border- rounded-md  transition-all duration-200">
       <a href="#">
+        {/* <Skeleton className="rounded-lg">
+          <div className="h-24 rounded-lg bg-default-300"></div>
+        </Skeleton>
+        <div className="space-y-3">
+          <Skeleton className="w-3/5 rounded-lg">
+            <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
+          </Skeleton>
+          <Skeleton className="w-4/5 rounded-lg">
+            <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
+          </Skeleton>
+          <Skeleton className="w-2/5 rounded-lg">
+            <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
+          </Skeleton>
+        </div> */}
         <div className="relative object-cover bg-white rounded-md overflow-hidden">
           <Image
             className="w-full h-full rounded-md"
@@ -33,34 +50,40 @@ function ProductCard({ product }: { product: Product }) {
             </button>
           </div>
         </div>
-        <div className="p-3">
-          <h2 className="font-bold line-clamp-2">{product.attributes.name}</h2>
-          <span>{category}</span>
-          {tags.length > 0 && (
-            <div className="gap-x-1 flex flex-wrap">
+        <div className="p-3 flex flex-col">
+          <h2 className="font-bold line-clamp-2 mb-2 min-h-12">
+            {product.attributes.name}
+          </h2>
+          <Chip className="bg-zinc-200 dark:bg-zinc-800 text-xs">
+            {category}
+          </Chip>
+          {/* {tags.length > 0 && (
+            <div className="gap-x-1 flex flex-wrap mt-2">
               {tags.map((tag) => (
-                <span
-                  className="border-[1px] px-1 rounded-sm border-gray-300 bg-gray-100"
+                <Chip
+                  // color="primary"
+                  className="bg-zinc-200 dark:bg-zinc-800"
                   key={tag.id}
                 >
                   {tag.attributes.title}
-                </span>
+                </Chip>
               ))}
             </div>
-          )}
-          <div className="flex justify-end items-end h-full">
+          )} */}
+          <div className="flex justify-between items-end h-full text-xl mt-2">
             {discount ? (
               <div>
-                <span className="line-through text-gray-500 text-sm mr-2">
+                <span>${product.attributes.price - discount}</span>
+                <span className="line-through text-red-500 text-sm ml-2">
                   ${product.attributes.price}
-                </span>
-                <span className="text-xl">
-                  ${product.attributes.price - discount}
                 </span>
               </div>
             ) : (
-              <span className="text-xl">${product.attributes.price}</span>
+              <span>${product.attributes.price}</span>
             )}
+            <button className=" block sm:hidden bg-gray-200 dark:bg-zinc-800 p-1 rounded-md hover:bg-gray-300 dark:hover:bg-zinc-700">
+              <PiShoppingCartLight className="  rounded-md w-6 h-6 text-zinc-900 dark:text-zinc-300" />
+            </button>
           </div>
         </div>
       </a>
