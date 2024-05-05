@@ -83,7 +83,7 @@ function NavBar() {
       shouldHideOnScroll
       className="w-full h-16 bg-white dark:bg-zinc-900 border-b-[1px] border-b-gray-300 dark:border-b-zinc-800"
     >
-      <div className="h-full w-full max-w-screen-xl mx-auto xl:px-0 flex items-center justify-between gap-2">
+      <div className="h-full w-full mx-auto xl:px-0 flex items-center justify-between gap-2">
         <div className="flex justify-center items-center gap-3">
           <button
             className="my-toggle sm:hidden w-7 pb-1"

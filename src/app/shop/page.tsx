@@ -35,21 +35,17 @@ function ShopePage() {
 
   return (
     <Container>
-      <div className="flex flex-col sm:flex-row gap-2">
-        <FilterSection />
-        <div className="w-full">
-          <HeaderShop />
-          {isLoading ? (
-            <SkeletonProductList />
-          ) : error ? (
-            <div className="flex justify-center items-center">
-              <p className="text-center text-2xl text-gray-600">{error}</p>
-            </div>
-          ) : (
-            <ProductList />
-          )}
+      <HeaderShop />
+      <FilterSection />
+      {isLoading ? (
+        <SkeletonProductList />
+      ) : error ? (
+        <div className="flex justify-center items-center">
+          <p className="text-center text-2xl text-gray-600">{error}</p>
         </div>
-      </div>
+      ) : (
+        <ProductList />
+      )}
     </Container>
   );
 }

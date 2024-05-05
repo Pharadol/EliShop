@@ -4,7 +4,7 @@ function SkeletonProductCard() {
   return (
     <>
       <Skeleton className="rounded-lg">
-        <div className="h-[207px] rounded-lg bg-default-300"></div>
+        <div className="h-[250px] rounded-lg bg-default-300"></div>
       </Skeleton>
       <div className="space-y-3 h-[144px] p-3 flex flex-col justify-between">
         <Skeleton className="w-5/5 rounded-lg">

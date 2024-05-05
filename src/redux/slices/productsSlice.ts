@@ -4,6 +4,9 @@ import { Product } from "@/model/Product";
 const initialState = {
   products: [] as Product[],
   filteredProducts: [] as Product[],
+  filterState: {
+    isExpanded: false,
+  }
 };
 
 const productsSlice = createSlice({
@@ -70,9 +73,12 @@ const productsSlice = createSlice({
 
       state.filteredProducts = filteredProducts;
     },
+    handleExpanded: (state, action: PayloadAction<boolean>) => {
+      state.filterState.isExpanded = action.payload;
+    }
   },
 });
 
-export const { setProducts, initFilterProduct, filterProducts, filterSearch } =
+export const { setProducts, initFilterProduct, filterProducts, filterSearch, handleExpanded } =
   productsSlice.actions;
 export default productsSlice.reducer;

@@ -5,7 +5,6 @@ import { getCategory, getTags, getThumbUrl } from "@/utils/productHelperUtils";
 import { MdFavorite } from "react-icons/md";
 import { Chip } from "@nextui-org/chip";
 import { PiShoppingCartLight } from "react-icons/pi";
-import { Card, Skeleton } from "@nextui-org/react";
 
 function ProductCard({ product }: { product: Product }) {
   const category = getCategory(product);
@@ -13,22 +12,8 @@ function ProductCard({ product }: { product: Product }) {
   const discount = product.attributes.discount;
 
   return (
-    <li className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border- rounded-md  transition-all duration-200">
+    <li className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-gray-600 rounded-md  transition-all duration-200">
       <a href="#">
-        {/* <Skeleton className="rounded-lg">
-          <div className="h-24 rounded-lg bg-default-300"></div>
-        </Skeleton>
-        <div className="space-y-3">
-          <Skeleton className="w-3/5 rounded-lg">
-            <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
-          </Skeleton>
-          <Skeleton className="w-4/5 rounded-lg">
-            <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
-          </Skeleton>
-          <Skeleton className="w-2/5 rounded-lg">
-            <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
-          </Skeleton>
-        </div> */}
         <div className="relative object-cover bg-white rounded-md overflow-hidden">
           <Image
             className="w-full h-full rounded-md"
