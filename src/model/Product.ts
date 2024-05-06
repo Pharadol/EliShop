@@ -15,6 +15,7 @@ export interface Product {
     };
     category: Category;
     thumbnail?: Thumbnail | null;
+    description: any;
   };
 }
 
