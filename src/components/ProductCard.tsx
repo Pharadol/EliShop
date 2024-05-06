@@ -8,12 +8,11 @@ import { PiShoppingCartLight } from "react-icons/pi";
 
 function ProductCard({ product }: { product: Product }) {
   const category = getCategory(product);
-  const tags = getTags(product);
   const discount = product.attributes.discount;
 
   return (
     <li className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-gray-600 rounded-md  transition-all duration-200">
-      <a href="#">
+      <Link href={`/shop/product/${product.id}`}>
         <div className="relative object-cover bg-white rounded-md overflow-hidden">
           <Image
             className="w-full h-full rounded-md"
@@ -22,8 +21,6 @@ function ProductCard({ product }: { product: Product }) {
             width={400}
             height={400}
             priority
-            // layout="fill"
-            // objectFit="cover"
           />
           <div className="abosute bottom-0 flex flex-wrap items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
             <button className="bg-gray-800 text-gray-300 px-4 py-2 text-xs rounded-full flex items-center gap-1 hover:bg-gray-200 hover:text-gray-800 duration-100 border-[1px] border-gray-700 ">
@@ -42,19 +39,6 @@ function ProductCard({ product }: { product: Product }) {
           <Chip className="bg-zinc-200 dark:bg-zinc-800 text-xs">
             {category}
           </Chip>
-          {/* {tags.length > 0 && (
-            <div className="gap-x-1 flex flex-wrap mt-2">
-              {tags.map((tag) => (
-                <Chip
-                  // color="primary"
-                  className="bg-zinc-200 dark:bg-zinc-800"
-                  key={tag.id}
-                >
-                  {tag.attributes.title}
-                </Chip>
-              ))}
-            </div>
-          )} */}
           <div className="flex justify-between items-end h-full text-xl mt-2">
             {discount ? (
               <div>
@@ -71,7 +55,7 @@ function ProductCard({ product }: { product: Product }) {
             </button>
           </div>
         </div>
-      </a>
+      </Link>
     </li>
   );
 }
