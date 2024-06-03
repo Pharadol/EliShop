@@ -7,8 +7,8 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|chip|input|modal|navbar|skeleton|ripple|spinner).js"
-],
+    "./node_modules/@nextui-org/theme/dist/components/(button|chip|input|modal|navbar|progress|skeleton|spinner|table|ripple|checkbox|spacer).js",
+  ],
   theme: {
     extend: {
       fontFamily: {
