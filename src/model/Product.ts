@@ -2,21 +2,7 @@ import { Thumbnail } from "./Thumbnail";
 
 export interface Product {
   id: number;
-  attributes: {
-    name: string;
-    price: number;
-    discount?: number | null;
-    slug?: string | null;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    tags: {
-      data: Tags[]
-    };
-    category: Category;
-    thumbnail?: Thumbnail | null;
-    description: any;
-  };
+  attributes: ProductAttributes;
 }
 
 export interface Tags {
@@ -42,4 +28,20 @@ export interface Category {
       publishedAt: string;
     };
   };
+}
+
+export interface ProductAttributes {
+  name: string;
+  price: number;
+  discount?: number | null;
+  slug?: string | null;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  tags: {
+    data: Tags[];
+  };
+  category: Category;
+  thumbnail?: Thumbnail | null;
+  description: any;
 }
