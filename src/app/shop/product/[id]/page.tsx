@@ -67,11 +67,11 @@ async function ProductPage({ params }: Props) {
                 </div>
               )}
               <div className="flex mt-3 sm:mt-6 gap-x-4 w-full sm:max-w-[400px]">
-                <button className="w-full bg-cyan-500 dark:bg-emerald-60 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
+                <button className="w-full bg-cyan-500 dark:bg-cyan-600 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
                   <span>Favorite</span>
                   <MdFavorite />
                 </button>
-                <button className="w-full bg-emerald-500 dark:bg-emerald-60 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
+                <button className="w-full bg-emerald-500 dark:bg-emerald-600 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
                   <span>Add to cart</span>
                   <RiShoppingCart2Fill />
                 </button>

@@ -19,9 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-display bg-gray-50 dark:bg-zinc-850">
         <Providers>
-          <NavBar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <NavBar />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
