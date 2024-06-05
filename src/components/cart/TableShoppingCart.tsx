@@ -52,7 +52,7 @@ function TableShoppingCart({ cartItems }: { cartItems: CartProduct[] }) {
 
   return (
     <>
-      <Table removeWrapper>
+      <Table removeWrapper aria-label="Products in Your Cart">
         <TableHeader>
           {headerColumns.map((item) => (
             <TableColumn
@@ -75,7 +75,7 @@ function TableShoppingCart({ cartItems }: { cartItems: CartProduct[] }) {
                     <div className="bg-white rounded-sm sm:mr-2 w-fit">
                       <Image
                         src={getThumbUrl(item)}
-                        alt="product-image"
+                        alt={`product image ${item.attributes.name}`}
                         width={80}
                         height={80}
                         className="rounded-sm"

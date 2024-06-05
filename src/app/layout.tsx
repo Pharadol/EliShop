@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import { Toaster } from "react-hot-toast";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import "swiper/swiper-bundle.css";
 import Providers from "./Providers";
+import "swiper/swiper-bundle.css";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-display bg-gray-50 dark:bg-zinc-850">
+      <body className="font-display dark:bg-zinc-850">
         <Providers>
-          <NavBar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <NavBar />
+            <main>
+              <Toaster position="bottom-right" />
+              {children}
+            </main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

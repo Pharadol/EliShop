@@ -5,8 +5,7 @@ import Image from "next/image";
 import { getThumbUrl, getCategory, getTags } from "@/utils/productHelperUtils";
 import QuillEditor from "@/components/QuillEditor";
 import { Chip } from "@nextui-org/chip";
-import { MdFavorite } from "react-icons/md";
-import { RiShoppingCart2Fill } from "react-icons/ri";
+import GroupButton from "@/components/shop/product/GroupButton";
 
 interface Props {
   params: {
@@ -28,7 +27,7 @@ async function ProductPage({ params }: Props) {
             <Image
               className="w-full h-full rounded-md"
               src={getThumbUrl(product)}
-              alt="product-image"
+              alt={`product image ${product.attributes.name}`}
               width={900}
               height={900}
               priority
@@ -66,16 +65,7 @@ async function ProductPage({ params }: Props) {
                   ))}
                 </div>
               )}
-              <div className="flex mt-3 sm:mt-6 gap-x-4 w-full sm:max-w-[400px]">
-                <button className="w-full bg-cyan-500 dark:bg-emerald-60 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
-                  <span>Favorite</span>
-                  <MdFavorite />
-                </button>
-                <button className="w-full bg-emerald-500 dark:bg-emerald-60 text-gray-100 px-4 py-2 rounded-md flex justify-center items-center gap-2 hover:opacity-70 duration-100 ">
-                  <span>Add to cart</span>
-                  <RiShoppingCart2Fill />
-                </button>
-              </div>
+              <GroupButton product={product} />
             </div>
           </div>
         </div>

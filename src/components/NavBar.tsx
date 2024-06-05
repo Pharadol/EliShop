@@ -99,7 +99,7 @@ function NavBar() {
           </button>
           <NavbarBrand onClick={() => setIsMenuOpen(false)}>
             <Link href={"/"}>
-              <Image src={logo} alt="logo" className="w-20" />
+              <Image src={logo} alt="logo image" className="w-20" />
             </Link>
           </NavbarBrand>
         </div>
