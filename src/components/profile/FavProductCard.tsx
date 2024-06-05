@@ -15,17 +15,18 @@ function FavProductCard({ product }: { product: Product }) {
 
   return (
     <article className="flex border-[1px] border-zinc-200 dark:border-zinc-800 rounded-md relative group">
-      <Link href={`/shop/product/${product.id}`}>
-        <div className="relative object-cover bg-white rounded-md w-[120px] md:w-[150px] overflow-hidden">
-          <Image
-            className="w-full h-full rounded-md hover:scale-105 duration-200"
-            src={getThumbUrl(product)}
-            alt="product-image"
-            width={400}
-            height={400}
-            priority
-          />
-        </div>
+      <Link
+        href={`/shop/product/${product.id}`}
+        className="relative object-cover bg-white rounded-md w-[120px] md:w-[150px] overflow-hidden"
+      >
+        <Image
+          className="w-full h-full rounded-md hover:scale-105 duration-200"
+          src={getThumbUrl(product)}
+          alt={`product image ${product.attributes.name}`}
+          width={400}
+          height={400}
+          priority
+        />
       </Link>
       <div className="p-2 pr-7">
         <Link

@@ -8,7 +8,6 @@ import { PiShoppingCartLight } from "react-icons/pi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { addToFavorite } from "@/redux/slices/favoriteSlice";
-
 function ProductCard({ product }: { product: Product }) {
   const dispatch = useDispatch();
   const category = getCategory(product);
@@ -21,7 +20,6 @@ function ProductCard({ product }: { product: Product }) {
     e.preventDefault();
     e.stopPropagation();
     await dispatch(addToCart(product));
-    console.log("add to cart successfully");
   };
 
   const handleAddToFavorite = async (
@@ -30,7 +28,6 @@ function ProductCard({ product }: { product: Product }) {
     e.preventDefault();
     e.stopPropagation();
     await dispatch(addToFavorite(product));
-    console.log("add to favorite successfully");
   };
 
   return (
@@ -40,7 +37,7 @@ function ProductCard({ product }: { product: Product }) {
           <Image
             className="w-full h-full rounded-md"
             src={getThumbUrl(product)}
-            alt="product-image"
+            alt={`product image ${product.attributes.name}`}
             width={400}
             height={400}
             priority
