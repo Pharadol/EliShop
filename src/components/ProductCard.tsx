@@ -42,7 +42,7 @@ function ProductCard({ product }: { product: Product }) {
             height={400}
             priority
           />
-          <div className="bottom-0 flex flex-wrap items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
+          <div className="bottom-0 hidden lg:flex flex-wrap items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
             <button
               onClick={(e) => handleAddToCart(e)}
               className="bg-gray-800 text-gray-300 px-4 py-2 text-xs rounded-full flex items-center gap-1 hover:bg-gray-200 hover:text-gray-800 duration-100 border-[1px] border-gray-700 "
@@ -76,7 +76,10 @@ function ProductCard({ product }: { product: Product }) {
             ) : (
               <span>${price}</span>
             )}
-            <button className=" block sm:hidden bg-gray-200 dark:bg-zinc-800 p-1 rounded-md hover:bg-gray-300 dark:hover:bg-zinc-700">
+            <button
+              onClick={(e) => handleAddToCart(e)}
+              className="block lg:hidden bg-gray-200 dark:bg-zinc-800 p-1 rounded-md hover:bg-gray-300 dark:hover:bg-zinc-700"
+            >
               <PiShoppingCartLight className="  rounded-md w-6 h-6 text-zinc-900 dark:text-zinc-300" />
             </button>
           </div>

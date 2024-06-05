@@ -15,18 +15,17 @@ function FavProductCard({ product }: { product: Product }) {
 
   return (
     <article className="flex border-[1px] border-zinc-200 dark:border-zinc-800 rounded-md relative group">
-      <Link
-        href={`/shop/product/${product.id}`}
-        className="relative object-cover bg-white rounded-md w-[120px] md:w-[150px] overflow-hidden"
-      >
-        <Image
-          className="w-full h-full rounded-md hover:scale-105 duration-200"
-          src={getThumbUrl(product)}
-          alt={`product image ${product.attributes.name}`}
-          width={400}
-          height={400}
-          priority
-        />
+      <Link href={`/shop/product/${product.id}`}>
+        <div className="object-cover bg-white rounded-md w-[120px] md:w-[150px] overflow-hidden">
+          <Image
+            className="w-full h-full rounded-md hover:scale-105 duration-200"
+            src={getThumbUrl(product)}
+            alt={`product image ${product.attributes.name}`}
+            width={400}
+            height={400}
+            priority
+          />
+        </div>
       </Link>
       <div className="p-2 pr-7">
         <Link
@@ -35,7 +34,7 @@ function FavProductCard({ product }: { product: Product }) {
         >
           {product.attributes.name}
         </Link>
-        <div>{getCategory(product)}</div>
+        <div className="line-clamp-1">{getCategory(product)}</div>
         <div className="text-xl mt-1">
           <span>${getPrice(product)}</span>
           {product.attributes.discount && (
@@ -48,9 +47,9 @@ function FavProductCard({ product }: { product: Product }) {
       <button
         onClick={handleRemoveFromFavorite}
         title="remove from favorites"
-        className="hover:bg-zinc-100 hover:dark:bg-zinc-800 rounded-md absolute top-2 right-2 hidden group-hover:block duration-200"
+        className=" hover:bg-zinc-100 hover:dark:bg-zinc-800 rounded-md absolute top-2 right-2 lg:hidden group-hover:block duration-200"
       >
-        <IoCloseOutline className="text-2xl" />
+        <IoCloseOutline className="text-2xl text-zinc-400 dark:text-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200" />
       </button>
     </article>
   );
