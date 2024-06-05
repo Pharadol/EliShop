@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { CartProduct } from "@/model/Cart";
 import { getPrice, getCategory, getThumbUrl } from "@/utils/productHelperUtils";
@@ -70,9 +69,9 @@ function TableShoppingCart({ cartItems }: { cartItems: CartProduct[] }) {
               className="border-b-[1px] dark:border-zinc-800"
             >
               <TableCell>
-                <Link href={`/shop/product/${item.id}`}>
-                  <div className="flex flex-col sm:flex-row">
-                    <div className="bg-white rounded-sm sm:mr-2 w-fit">
+                <div className="flex flex-col sm:flex-row">
+                  <Link href={`/shop/product/${item.id}`}>
+                    <div className="bg-white rounded-sm sm:mr-2 w-fit hover:opacity-70">
                       <Image
                         src={getThumbUrl(item)}
                         alt={`product image ${item.attributes.name}`}
@@ -81,19 +80,17 @@ function TableShoppingCart({ cartItems }: { cartItems: CartProduct[] }) {
                         className="rounded-sm"
                       ></Image>
                     </div>
-                    <div>
-                      <Link
-                        href={`/shop/product/${item.id}`}
-                        className="text-sm  font-semibold line-clamp-2"
-                      >
-                        {item.attributes.name}
-                      </Link>
-                      <p className="mt-2 hidden sm:block">
-                        {getCategory(item)}
-                      </p>
-                    </div>
+                  </Link>
+                  <div>
+                    <Link
+                      href={`/shop/product/${item.id}`}
+                      className="text-sm  font-semibold line-clamp-2 hover:opacity-70"
+                    >
+                      {item.attributes.name}
+                    </Link>
+                    <p className="mt-2 hidden sm:block">{getCategory(item)}</p>
                   </div>
-                </Link>
+                </div>
               </TableCell>
               <TableCell className="text-center">${getPrice(item)}</TableCell>
               <TableCell>
