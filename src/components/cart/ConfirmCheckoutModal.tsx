@@ -9,6 +9,8 @@ import {
 } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../../redux/slices/cartSlice";
+import { toast } from "react-hot-toast";
+
 
 function ConfirmCheckoutModal() {
   const dispatch = useDispatch();
@@ -32,6 +34,7 @@ function ConfirmCheckoutModal() {
           {(onClose) => {
             const confirm = async () => {
               await dispatch(clearCart());
+              await toast.success("Order Confirmed");
               await onClose();
             };
             return (

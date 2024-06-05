@@ -10,7 +10,7 @@ function Footer() {
       <Container className="!pb-6">
         <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-16 pb-8 pt-4 sm:pt-0 border-b-[1px] dark:border-zinc-700">
           <div>
-            <Image src={logo} alt="logo" className="w-20" />
+            <Image src={logo} alt="logo image" className="w-20" />
             <p className="mt-2 dark:text-zinc-300">{footer.slogan}</p>
           </div>
           <div className="grid grid-cols-2 gap-y-8 sm:flex justify-between lg:w-[60%]">
