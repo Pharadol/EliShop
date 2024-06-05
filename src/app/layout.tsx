@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-display bg-gray-50 dark:bg-zinc-850">
+      <body className="font-display dark:bg-zinc-850">
         <Providers>
           <div className="min-h-screen flex flex-col">
             <NavBar />
