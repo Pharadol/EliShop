@@ -9,11 +9,13 @@ function ProductList() {
   const productList = productsState?.filteredProducts;
 
   return (
-    <ol className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+    <ul className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
       {productList.map((item: Product) => (
-        <ProductCard key={item.id} product={item} />
+        <li key={item.id}>
+          <ProductCard product={item} />
+        </li>
       ))}
-    </ol>
+    </ul>
   );
 }
 

@@ -1,8 +1,12 @@
 import { Skeleton } from "@nextui-org/react";
 
-function SkeletonProductCard() {
+interface Props {
+  className?: string;
+}
+
+function SkeletonProductCard({className=''} : Props) {
   return (
-    <>
+    <li className={`${className} border-[1px] border-zinc-200 dark:border-zinc-800 rounded-md  transition-all duration-200`}>
       <Skeleton className="rounded-lg">
         <div className="h-[250px] rounded-lg bg-default-300"></div>
       </Skeleton>
@@ -17,7 +21,7 @@ function SkeletonProductCard() {
           <div className="h-4 w-2/5 rounded-lg bg-default-300"></div>
         </Skeleton>
       </div>
-    </>
+    </li>
   );
 }
 

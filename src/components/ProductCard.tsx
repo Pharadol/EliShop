@@ -31,7 +31,7 @@ function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <li className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-gray-600 rounded-md  transition-all duration-200">
+    <article className="group border-[1px] border-zinc-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-gray-600 rounded-md  transition-all duration-200">
       <Link href={`/shop/product/${product.id}`}>
         <div className="relative object-cover bg-white rounded-md rounded-b-none overflow-hidden">
           <Image
@@ -85,7 +85,7 @@ function ProductCard({ product }: { product: Product }) {
           </div>
         </div>
       </Link>
-    </li>
+    </article>
   );
 }
 
