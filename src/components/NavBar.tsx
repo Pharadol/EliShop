@@ -16,7 +16,6 @@ import {
   NavbarBrand,
   NavbarMenuItem,
   Spinner,
-  Skeleton,
 } from "@nextui-org/react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "@/redux/slices/authSlice";

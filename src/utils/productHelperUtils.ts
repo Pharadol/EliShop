@@ -1,8 +1,15 @@
 import { Product } from "@/model/Product";
 import { CartProduct } from "@/model/Cart";
+import noImage  from '../assets/images/NoImage.jpg'
 
 const getThumbUrl = (product: Product | CartProduct) => {
-  return `${process.env.API_URL}${product.attributes.thumbnail?.data?.attributes?.url}`; // dev 
+  const baseUrl = process.env.API_URL || "";
+  const imageUrl = product.attributes.thumbnail?.data?.attributes?.url;
+
+  return !baseUrl || !imageUrl ? noImage : `${baseUrl}${imageUrl}`
+  // return !baseUrl || !imageUrl ? noImage : `${imageUrl}` // prod
+
+  // return `${process.env.API_URL}${product.attributes.thumbnail?.data?.attributes?.url}`; // dev 
   // return `${product.attributes.thumbnail?.data?.attributes?.url}`; // prod
 };
 const getCategory = (product: Product | CartProduct) => {

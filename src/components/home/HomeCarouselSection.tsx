@@ -32,8 +32,8 @@ function HomeCarouselSection({ title, tag }: Props) {
     }
   };
   return (
-    <section className="mb-12">
-      <h2 className="text-xl sm:text-2xl font-semibold mb-4">{title}</h2>
+    <section className="max-w-screen-xl my-6 px-3 py-6 sm:py-9 mx-auto">
+      <h2 className="text-xl sm:text-3xl font-semibold mb-4">{title}</h2>
       {
         isLoading? (
           <SkeletonProductCarousel />
