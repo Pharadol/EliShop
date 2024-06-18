@@ -12,7 +12,7 @@ import Link from "next/link";
 
 function BannerSwiper() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto">
+    <div className="w-full max-w-screen-xl mx-auto">
       <Swiper
         pagination={{ type: "bullets", clickable: true }}
         modules={[Autoplay, Pagination]}

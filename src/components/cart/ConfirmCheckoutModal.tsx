@@ -47,8 +47,6 @@ function ConfirmCheckoutModal() {
                     you click the cancel button you'll go back to the cart
                     segment. Clicking confirm button will consider your order
                     confirmed, payment done & also order delivered successfully.
-                    Another thing to mention, order history hasn't been
-                    developed due to not having a proper backend api.
                   </p>
                   <div className="flex justify-between gap-4 pb-4 mt-6">
                     <Button
