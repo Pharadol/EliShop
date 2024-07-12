@@ -68,10 +68,8 @@ function NavBar() {
 
     if (userData) {
       setUser(JSON.parse(userData));
-      setIsLoading(false);
-    } else {
-      setIsLoading(false);
     }
+    setIsLoading(false);
   }, []);
 
   const handleLogout = async () => {
