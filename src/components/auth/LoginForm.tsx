@@ -2,7 +2,7 @@ import { Input, Button } from "@nextui-org/react";
 import { Login } from "@/model/Auth";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser, logoutUser } from "@/redux/slices/authSlice";
+import { loginUser } from "@/redux/slices/authSlice";
 import { AppDispatch } from "@/redux/store";
 import { AuthState } from "@/model/Auth";
 

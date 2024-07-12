@@ -1,11 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-
 import { categoryOption, tagOption } from "@/assets/data/filterOption";
 import GroupFilterOption from "./GroupFilterOption";
-
 import { useDispatch, useSelector } from "react-redux";
 import { filterProducts } from "@/redux/slices/productsSlice";
+import { RootState } from "@/redux/store";
 
 function FilterSection() {
   const dispatch = useDispatch();
@@ -14,11 +13,9 @@ function FilterSection() {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
-  const filterSlice: any = useSelector(
-    (state: { products: any }) => state?.products
+  const filterState = useSelector(
+    (state: RootState) => state.products.filterState
   );
-  const filterState = filterSlice?.filterState;
-
   const handleCategoryChange = (id: string) => {
     setCategory((prevCategory) =>
       prevCategory.map((item) =>
