@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "@/model/Product";
 import { toast } from "react-hot-toast";
-import pleaseLoginAlert from "@/utils/pleaseLoginAlert";
 
 const favoriteSlice = createSlice({
   name: "favorite",
