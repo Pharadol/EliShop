@@ -38,7 +38,7 @@ function Page() {
             Favorite List ({favorite.length})
           </h2>
           {favorite.length <= 0 ? (
-            <EmptyState status="empty-favorites" />
+            <EmptyState status="empty-favorites" desc="Your favorite list is empty, add some items to your favorite list." />
           ) : (
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-20">
               {favorite.map((item) => (
@@ -50,7 +50,7 @@ function Page() {
           )}
         </>
       ) : (
-        <EmptyState status="guest" />
+        <EmptyState status="guest" desc="Please login to access this feature." />
       )}
       <div></div>
     </Container>
