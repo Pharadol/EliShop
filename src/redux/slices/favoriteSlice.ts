@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "@/model/Product";
 import { toast } from "react-hot-toast";
+import pleaseLoginAlert from "@/utils/pleaseLoginAlert";
 
 const favoriteSlice = createSlice({
   name: "favorite",
@@ -8,6 +9,12 @@ const favoriteSlice = createSlice({
   reducers: {
     addToFavorite: (state, action: PayloadAction<Product>) => {
       const itemExists = state.find((item) => item.id === action.payload.id);
+      const isLogin = localStorage.getItem("currentUser");
+
+      if (!isLogin) {
+        toast.error("Please sign in to add favorites.", {position: "top-center"});
+        return;
+      }
       if (!itemExists) {
         state.push(action.payload);
         toast.success("Successfully added to favorites.");

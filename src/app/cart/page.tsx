@@ -21,10 +21,8 @@ function Page() {
     const userData = localStorage.getItem("currentUser");
     if (userData) {
       setUser(JSON.parse(userData));
-      setIsLoading(false);
-    } else {
-      setIsLoading(false);
     }
+    setIsLoading(false);
   }, []);
 
   const totalPrice = () => {

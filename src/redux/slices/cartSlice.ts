@@ -9,12 +9,17 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<Product>) => {
       const itemExists = state.find((item) => item.id === action.payload.id);
-      if (itemExists) {
+      const isLogin = localStorage.getItem("currentUser");
+
+      if (itemExists && isLogin) {
         itemExists.quantity++;
-      } else {
+        toast.success("Successfully added to cart.");
+      } else if (!itemExists && isLogin) {
         state.push({ ...action.payload, quantity: 1 });
+        toast.success("Successfully added to cart.");
+      } else if (!isLogin) {
+        toast.error("Please log in to add items to your cart.", {position: "top-center"});
       }
-      toast.success("Successfully added to cart.");
     },
     incrementQuantity: (state, action) => {
       const item = state.find((item) => item.id === action.payload);

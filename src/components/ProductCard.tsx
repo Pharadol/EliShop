@@ -8,6 +8,7 @@ import { PiShoppingCartLight } from "react-icons/pi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { addToFavorite } from "@/redux/slices/favoriteSlice";
+
 function ProductCard({ product }: { product: Product }) {
   const dispatch = useDispatch();
   const category = getCategory(product);
@@ -42,7 +43,7 @@ function ProductCard({ product }: { product: Product }) {
             height={400}
             priority
           />
-          <div className="bottom-0 hidden lg:flex flex-wrap items-center gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
+          <div className="absolute w-full bottom-0 hidden lg:flex flex-wrap gap-2 justify-center translate-y-[110%] group-hover:-translate-y-2 transition-transform duration-300">
             <button
               onClick={(e) => handleAddToCart(e)}
               className="bg-gray-800 text-gray-300 px-4 py-2 text-xs rounded-full flex items-center gap-1 hover:bg-gray-200 hover:text-gray-800 duration-100 border-[1px] border-gray-700 "

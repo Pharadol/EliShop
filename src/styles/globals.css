@@ -11,11 +11,11 @@
   font-stretch: 75% 125%;
 }
 
-@layer base{
+@layer base {
   body {
-      @apply dark:bg-zinc-900 bg-white;
-      nav header {
-        @apply !px-3 !max-w-screen-xl;
-      }
+    @apply dark:bg-zinc-900 bg-white;
+    nav header {
+      @apply !px-3 !max-w-screen-xl;
+    }
   }
 }

@@ -18,10 +18,8 @@ function Page() {
     const userData = localStorage.getItem("currentUser");
     if (userData) {
       setUser(JSON.parse(userData));
-      setIsLoading(false);
-    } else {
-      setIsLoading(false);
     }
+    setIsLoading(false);
   }, []);
 
   return (
@@ -36,7 +34,9 @@ function Page() {
             </div>
             <h1 className="text-xl my-4">{user.username}</h1>
           </div>
-            <h2 className="text-2xl font-semibold mb-6">Favorite List ({favorite.length})</h2>
+          <h2 className="text-2xl font-semibold mb-6">
+            Favorite List ({favorite.length})
+          </h2>
           {favorite.length <= 0 ? (
             <EmptyState status="empty-favorites" />
           ) : (
