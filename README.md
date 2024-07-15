@@ -81,6 +81,21 @@ You can see a live demo of the project [here](https://crud-user-nextjs-mock-api.
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Pharadol/EliShop.git
-   cd elishop
+    ```sh
+    git clone https://github.com/Pharadol/EliShop.git
+    ```
+
+2. Navigate to the project directory:
+    ```sh
+    cd EliShop
+    ```
+
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+4. Start the development server:
+    ```sh
+    npm run dev
+    ```
