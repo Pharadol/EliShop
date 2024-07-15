@@ -6,26 +6,25 @@ Elishop is a frontend shopping website that fetches product and user data from S
 You can see a live demo of the project [here](https://crud-user-nextjs-mock-api.vercel.app/).
 
 ![Project Screenshot](https://img2.pic.in.th/pic/1-1_home-white.png)
-home page (light mode)
+
 ![Project Screenshot](https://img2.pic.in.th/pic/1-2_home-dark.png)
-home page (dark mode)
+
 
 ![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/1-2_login.png)
-login
+
 ![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/1-4_signup.png)
-signup
+
 
 ![Project Screenshot](https://img2.pic.in.th/pic/2-1_shop-product-list.png)
-shop page
+
 ![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/2-2_shop-filtered.png)
-shop page with filter
 
 ![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/3_product-detail.png)
-product detail page
+
 ![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/5_profile-favorite-item.png)
-profile page
+
 ![Project Screenshot](https://img2.pic.in.th/pic/4_cart627f6744618bdfa4.png)
-cart page
+
 
 ## Features
 
