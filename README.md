@@ -5,7 +5,18 @@ Elishop is a frontend shopping website that fetches product and user data from S
 ## Demo
 You can see a live demo of the project [here](https://crud-user-nextjs-mock-api.vercel.app/).
 
-![Project Screenshot](https://img2.pic.in.th/pic/CRUD-users-next-mockAPI.png)
+![Project Screenshot](https://img2.pic.in.th/pic/1-1_home-white.png)
+![Project Screenshot](https://img2.pic.in.th/pic/1-2_home-dark.png)
+
+![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/1-2_login.png)
+![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/1-4_signup.png)
+
+![Project Screenshot](https://img2.pic.in.th/pic/2-1_shop-product-list.png)
+![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/2-2_shop-filtered.png)
+
+![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/3_product-detail.png)
+![Project Screenshot](https://img5.pic.in.th/file/secure-sv1/5_profile-favorite-item.png)
+![Project Screenshot](https://img2.pic.in.th/pic/4_cart627f6744618bdfa4.png)
 
 ## Features
 
@@ -44,6 +55,15 @@ You can see a live demo of the project [here](https://crud-user-nextjs-mock-api.
   - Guests are prompted to log in before accessing certain features
 
 **Note:** Add to Cart and Favorite buttons are available on product cards in the Home and Shop pages. If the user is not logged in, a prompt will appear.
+
+## Technologies Used
+- Next.js 14.2.2
+- TypeScript 5
+- TailwindCSS 3.4.1
+- Redux Toolkit 2.2.3
+- Strapi CMS
+- React 18
+- Other Libraries: @nextui-org, axios, cookies-next, framer-motion, react-hook-form, react-hot-toast, react-icons, react-quill, react-redux, swiper
 
 ## Getting Started
 
