@@ -7,7 +7,8 @@ const getThumbUrl = (product: Product | CartProduct) => {
   const imageUrl = product.attributes.thumbnail?.data?.attributes?.url;
 
   // return !baseUrl || !imageUrl ? noImage : `${baseUrl}${imageUrl}` //dev
-  return !baseUrl || !imageUrl ? noImage : `${imageUrl}` // prod
+  // return !baseUrl || !imageUrl ? noImage : `${imageUrl}` // prod
+  return imageUrl ? imageUrl : noImage;
 };
 const getCategory = (product: Product | CartProduct) => {
   return product.attributes?.category?.data
