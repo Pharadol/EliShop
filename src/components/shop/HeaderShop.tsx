@@ -42,7 +42,7 @@ function HeaderShop() {
               isExpandedFilter
                 ? "text-zinc-800 dark:text-zinc-300"
                 : "text-zinc-400 dark:text-zinc-600"
-            }  border-zinc-400 dark:border-zinc-600 hover:border-zinc-800 dark:hover:border-zinc-300 p-1 border-[1px] rounded-md`}
+            }  border-zinc-400 dark:border-zinc-600 hover:border-zinc-800 dark:hover:border-zinc-300 p-1 border-[1px] rounded-md ml-2`}
             onClick={() => dispatch(handleExpanded(!isExpandedFilter))}
           >
             <RiFilter3Line className="text-2xl" />
