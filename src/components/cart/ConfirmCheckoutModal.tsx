@@ -42,10 +42,10 @@ function ConfirmCheckoutModal() {
                 <ModalBody>
                   <p>
                     Welcome to the checkout section. This is being a development
-                    project, I haven&apos;t implemented any payment related task. If
-                    you click the cancel button you&apos;ll go back to the cart
+                    project, I have not implemented any payment related task. If
+                    you click the cancel button you will go back to the cart
                     segment. Clicking confirm button will consider your order
-                    confirmed, payment done &amp; also order delivered successfully.
+                    confirmed, payment done and also order delivered successfully.
                   </p>
                   <div className="flex justify-between gap-4 pb-4 mt-6">
                     <Button
