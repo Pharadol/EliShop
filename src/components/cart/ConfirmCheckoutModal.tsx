@@ -11,7 +11,6 @@ import { useDispatch } from "react-redux";
 import { clearCart } from "../../redux/slices/cartSlice";
 import { toast } from "react-hot-toast";
 
-
 function ConfirmCheckoutModal() {
   const dispatch = useDispatch();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -43,10 +42,10 @@ function ConfirmCheckoutModal() {
                 <ModalBody>
                   <p>
                     Welcome to the checkout section. This is being a development
-                    project, I haven't implemented any payment related task. If
-                    you click the cancel button you'll go back to the cart
+                    project, I haven&apos;t implemented any payment related task. If
+                    you click the cancel button you&apos;ll go back to the cart
                     segment. Clicking confirm button will consider your order
-                    confirmed, payment done & also order delivered successfully.
+                    confirmed, payment done &amp; also order delivered successfully.
                   </p>
                   <div className="flex justify-between gap-4 pb-4 mt-6">
                     <Button
