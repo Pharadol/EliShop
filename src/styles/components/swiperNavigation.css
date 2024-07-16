@@ -7,12 +7,6 @@
     .arrow {
       @apply text-white font-bold;
     }
-    .prev {
-      @apply !pr-1;
-    }
-    .next {
-      @apply !pl-1;
-    }
   }
   button:hover {
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
