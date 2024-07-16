@@ -3,7 +3,7 @@
 Elishop is a frontend shopping website that fetches product and user data from Strapi CMS. This project is developed using Next.js, TypeScript, TailwindCSS, Redux, and various other technologies.
 
 ## Demo
-You can see a live demo of the project [here](https://crud-user-nextjs-mock-api.vercel.app/).
+You can see a live demo of the project [here](https://eli-shop-sable.vercel.app/).
 
 ![Project Screenshot](https://img2.pic.in.th/pic/1-1_home-white.png)
 ![Project Screenshot](https://img2.pic.in.th/pic/1-2_home-dark.png)
