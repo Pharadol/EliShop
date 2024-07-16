@@ -6,11 +6,8 @@ const getThumbUrl = (product: Product | CartProduct) => {
   const baseUrl = process.env.API_URL || "";
   const imageUrl = product.attributes.thumbnail?.data?.attributes?.url;
 
-  return !baseUrl || !imageUrl ? noImage : `${baseUrl}${imageUrl}`
-  // return !baseUrl || !imageUrl ? noImage : `${imageUrl}` // prod
-
-  // return `${process.env.API_URL}${product.attributes.thumbnail?.data?.attributes?.url}`; // dev 
-  // return `${product.attributes.thumbnail?.data?.attributes?.url}`; // prod
+  // return !baseUrl || !imageUrl ? noImage : `${baseUrl}${imageUrl}` //dev
+  return !baseUrl || !imageUrl ? noImage : `${imageUrl}` // prod
 };
 const getCategory = (product: Product | CartProduct) => {
   return product.attributes?.category?.data
