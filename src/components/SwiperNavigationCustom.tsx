@@ -10,10 +10,10 @@ function SwiperNavigationCustom() {
   return (
     <div className="navigation-swiper-wrapper">
       <button onClick={() => swiper.slidePrev()}>
-        <IoIosArrowBack className="arrow prev" />
+        <IoIosArrowBack className="arrow prev !w-12 !h-12" />
       </button>
       <button onClick={() => swiper.slideNext()}>
-        <IoIosArrowForward className="arrow next" />
+        <IoIosArrowForward className="arrow next !w-12 !h-12" />
       </button>
     </div>
   );
