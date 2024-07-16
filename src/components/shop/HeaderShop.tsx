@@ -5,19 +5,16 @@ import { filterSearch, handleExpanded } from "@/redux/slices/productsSlice";
 
 import { Input } from "@nextui-org/input";
 import { FaSearch } from "react-icons/fa";
-import { MdOutlineExpandMore } from "react-icons/md";
-import { BsFilter } from "react-icons/bs";
-import { FiFilter } from "react-icons/fi";
-import { CiFilter } from "react-icons/ci";
 import { RiFilter3Line } from "react-icons/ri";
+import { RootState } from "@/redux/store";
 
 function HeaderShop() {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
-  const filterSlice: any = useSelector(
-    (state: { products: any }) => state?.products
-  );
-  const isExpandedFilter = filterSlice?.filterState.isExpanded;
+
+  const isExpandedFilter = useSelector(
+    (state: RootState) => state.products.filterState.isExpanded
+  )
 
   useEffect(() => {
     dispatch(filterSearch({ searchText: search }));
@@ -27,23 +24,6 @@ function HeaderShop() {
     <>
       <h1 className="text-3xl font-semibold mb-4">Shop</h1>
       <div className="flex items-center mb-6 w-full justify-between">
-        {/* <div className="relative w-fit inline-flex h-9 text-base text-primeColor border-[1px] border-gray-300 items-center gap-2 justify-between px-4 py-1 rounded-md">
-          <input
-            type="text"
-            placeholder="Search your products here"
-            className="flex h-full w-fit outline-none bg-transparent placeholder:text-gray-600"
-            onChange={(e) => setSearch(e.target.value)}
-            value={search}
-          />
-          {search ? (
-            <IoCloseOutline
-              onClick={() => setSearch("")}
-              className="w-5 h-5 hover:cursor-pointer duration-200"
-            />
-          ) : (
-            <FaSearch className="w-5 h-5 hover:cursor-pointer text-gray-500" />
-          )}
-        </div> */}
         <Input
           value={search}
           onValueChange={setSearch}
@@ -67,10 +47,6 @@ function HeaderShop() {
           >
             <RiFilter3Line className="text-2xl" />
           </button>
-          {/* <button className="flex items-center h-10 px-2 border-[1px] rounded-md hover:border-gray-700">
-            Price
-            <MdOutlineExpandMore />
-          </button> */}
         </div>
       </div>
     </>

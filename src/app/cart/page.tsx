@@ -43,7 +43,7 @@ function Page() {
         <LoadingState />
       ) : user ? (
         cart.length <= 0 ? (
-          <EmptyState status="empty-cart" />
+          <EmptyState status="empty-cart" desc="Your cart is empty, add some items to your cart."  />
         ) : (
           <>
             <TableShoppingCart cartItems={cart} />
@@ -57,7 +57,7 @@ function Page() {
           </>
         )
       ) : (
-        <EmptyState status="guest" />
+        <EmptyState status="guest" desc="Please login to access this feature." />
       )}
     </Container>
   );
